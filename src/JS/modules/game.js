@@ -27,8 +27,6 @@ export class Game {
         }
         this.score=0
         this.scoreElement.innerText = this.score;
-        this.showGrid();
-
         this.food = new Food(this.context, this.positionsCount,
             this.positionsSize);
         this.snake = new Snake(this.context, this.positionsCount,
@@ -41,7 +39,7 @@ export class Game {
 
     gameProcess() {
         this.context.clearRect(0, 0, this.positionsCount * this.positionsSize, this.positionsCount * this.positionsSize);
-        this.showGrid();
+        // this.showGrid();
         this.food.showFood();
         let result = this.snake.showSnake(this.food.foodPosition);
         if (result) {
