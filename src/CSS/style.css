@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+body{background-color: rgba(27, 146, 32, 0.69);
+    font-family: Arial,sans-serif;
+}
+
+.container{
+    padding: 20px;
+}
+
+canvas{
+    background-color: green;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.score{
+    margin-left: 20px;
+    font-size: 40px;
+}
+
+.button{
+    padding: 20px;
+    background: blue;
+    color: white;
+    border: 0;
+    cursor: pointer;
+}
+
+
