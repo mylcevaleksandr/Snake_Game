@@ -22,6 +22,9 @@ export class Game {
     }
 
     startGame() {
+        if (this.interval){
+            clearInterval(this.interval)
+        }
         this.score=0
         this.scoreElement.innerText = this.score;
         this.showGrid();
@@ -33,7 +36,7 @@ export class Game {
         this.food.setNewFoodPosition();
         this.interval = setInterval(() => {
             this.gameProcess();
-        }, 175);
+        }, 150);
     }
 
     gameProcess() {
