@@ -22,6 +22,8 @@ export class Game {
     }
 
     startGame() {
+        this.score=0
+        this.scoreElement.innerText = this.score;
         this.showGrid();
 
         this.food = new Food(this.context, this.positionsCount,
