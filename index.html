@@ -6,14 +6,24 @@
     <meta name="author" content="Aleksandr Myltsev">
     <title>Snake Game</title>
     <link rel="stylesheet" href="src/CSS/style.css">
+    <link rel="stylesheet" href="src/CSS/Adaptive.css">
     <script defer src="src/JS/app.js" type="module"></script>
 </head>
 <body>
 <div class="container" id="container">
-    <h1>Use arrows to control the snake. Eat the goodies to grow! Don't eat yourself!</h1>
-    <div class="info">
-        <button class="button" id="start">Begin!</button>
+    <h2 class="header">Use arrows to control the snake. Eat the goodies to grow! Don't eat yourself!</h2>
+    <div class="info" >
+        <button class="btn" id="start">Begin!</button>
         <div class="score">Score: <span id="score">0</span> </div>
+    </div>
+    <div class="canvas_container" id="canvas_container"></div>
+    <div class="controls">
+        <button class="btn" id="left">Left</button>
+        <div class="controls_up_down">
+            <button class="btn" id="up">Up</button>
+            <button class="btn" id="down">Down</button>
+        </div>
+        <button class="btn" id="right">Right</button>
     </div>
 </div>
 </body>

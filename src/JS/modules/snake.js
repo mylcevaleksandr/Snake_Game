@@ -5,17 +5,51 @@ export class Snake {
     ];
 
     currentDirection = 'right';
-
+leftBtn=null
+rightBtn=null
+upBtn=null
+downBtn=null
     context = null;
     positionsSize = null;
     positionsCount = null;
 
     constructor(context, positionsCount, positionsSize) {
+        this.leftBtn=document.getElementById('left')
+        this.rightBtn=document.getElementById('right')
+        this.upBtn=document.getElementById('up')
+        this.downBtn=document.getElementById('down')
         this.context = context;
         this.positionsSize = positionsSize;
         this.positionsCount = positionsCount;
-
+this.addButtonHandler()
         this.addKeyboardHandler();
+    }
+    
+    addButtonHandler(){
+        this.leftBtn.onclick=()=>{
+            if (this.currentDirection!='right'){
+                this.currentDirection = 'left';
+                console.log(this.currentDirection);
+            }
+        }
+        this.rightBtn.onclick=()=>{
+            if (this.currentDirection!='left'){
+                this.currentDirection = 'right';
+                console.log(this.currentDirection);
+            }
+        }
+        this.upBtn.onclick=()=>{
+            if (this.currentDirection!='down'){
+                this.currentDirection = 'up';
+                console.log(this.currentDirection);
+            }
+        }
+        this.downBtn.onclick=()=>{
+            if (this.currentDirection!='up'){
+                this.currentDirection = 'down';
+                console.log(this.currentDirection);
+            }
+        }
     }
 
     addKeyboardHandler() {
@@ -39,7 +73,7 @@ export class Snake {
         };
 
         for (let i = 0; i < this.snake.length; i++) {
-            this.context.fillStyle = 'black';
+            this.context.fillStyle = ' #003554';
             this.context.beginPath();
             this.context.fillRect(this.snake[i].x * this.positionsSize - this.positionsSize, this.snake[i].y * this.positionsSize - this.positionsSize, this.positionsSize, this.positionsSize);
         }

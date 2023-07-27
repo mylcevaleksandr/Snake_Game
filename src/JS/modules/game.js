@@ -22,10 +22,10 @@ export class Game {
     }
 
     startGame() {
-        if (this.interval){
-            clearInterval(this.interval)
+        if (this.interval) {
+            clearInterval(this.interval);
         }
-        this.score=0
+        this.score = 0;
         this.scoreElement.innerText = this.score;
         this.food = new Food(this.context, this.positionsCount,
             this.positionsSize);
@@ -34,7 +34,7 @@ export class Game {
         this.food.setNewFoodPosition();
         this.interval = setInterval(() => {
             this.gameProcess();
-        }, 150);
+        }, 200);
     }
 
     gameProcess() {
@@ -56,8 +56,8 @@ export class Game {
     endGame() {
         clearInterval(this.interval);
 
-        this.context.fillStyle = 'black';
-        this.context.font = 'bold 48px Arial';
+        this.context.fillStyle = '#003554';
+        this.context.font = 'bold 25px Arial';
         this.context.textAlign = 'center';
         this.context.fillText('You Win! Your score is: ' + this.score + '!', (this.positionsCount * this.positionsSize) / 2, (this.positionsCount * this.positionsSize) / 2);
     }
@@ -73,7 +73,7 @@ export class Game {
             this.context.moveTo(0, 0.5 + x + this.positionsSize);
             this.context.lineTo(size + this.positionsSize, 0.5 + x + this.positionsSize);
         }
-        this.context.strokeStyle = "black";
+        this.context.strokeStyle = "aqua";
         this.context.stroke();
     }
 }

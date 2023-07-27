@@ -13,35 +13,66 @@ ol,
 li {
     list-style: none;
 }
-body{background-color: rgba(27, 146, 32, 0.69);
-    font-family: Arial,sans-serif;
+
+body {
+    background-color: #fffaca;
+    font-family: Arial, sans-serif;
 }
 
-.container{
-    padding: 20px;
+.container {
+    text-align: center;
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-canvas{
-    background-color: green;
+canvas {
+
+    background-color: #679289;
 }
 
-.info{
+.header {
+    color: #003554;
+}
+
+.info {
+    margin: 30px 0;
+    justify-content: center;
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
 }
 
-.score{
+.score {
+    color: #003554;
     margin-left: 20px;
     font-size: 40px;
 }
 
-.button{
-    padding: 20px;
-    background: blue;
-    color: white;
+.btn {
+    width: 75px;
+    padding: 10px;
+    background: #679289;
+    color: #fffaca;
     border: 0;
     cursor: pointer;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.btn:hover{
+   outline: 2px solid #003554;
+}
+
+.controls{
+    display: none;
+    justify-content: center;
+    column-gap: 10px;
+    margin-top: 10px;
+    align-items: center;
+}
+.controls_up_down{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
 }
 
 
